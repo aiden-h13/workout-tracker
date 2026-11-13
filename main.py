@@ -9,7 +9,7 @@ set_site_information(
     description="Track workouts, record exercises, and monitor your fitness progress.",
     sources="Thanks to the Drafter documentation and my CISC-108 course materials.",
     planning=[],
-    links=["https://github.com/your-username/your-repository"]
+    links=["https://aiden-h13.github.io/workout-tracker/"]
 )
 
 hide_debug_information()
@@ -65,7 +65,7 @@ def add_workout(state: State) -> Page:
             "Other"
         ], "Chest"),
         
-        "Excercises:",
+        "Exercises:",
         TextArea("exercises", ""),
         "Notes:",
         TextArea("notes", ""),
