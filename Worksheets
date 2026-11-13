@@ -1,0 +1,381 @@
+
+BRAINSTORMING:
+
+
+Final Project: Pick a Project
+Computer Science - Week 10
+Oct 3, 2026 - Version 0.0.2
+Please make sure to your UD email AND name is below. Unless your UD emails are included in this table, then you will not earn any points for this assignment when it is graded! Every person should submit their own individual worksheet.
+
+Talk about each of the questions with a friend or our LLM (or both), but make sure the words you enter below are yours (with the obvious exceptions notwithstanding). Brainstorming is best done in full sentences, and the main goal here is brainstorming. It's worth reviewing the information in this series of pages in the Drafter documentation to gain a better understanding of the process.
+
+Role
+Name
+Email
+Developer (You)
+Aiden Hearn
+arhearn@udel.edu
+Friend (optional)
+
+
+
+
+
+
+Part 1: The Goal & Prior Implementations
+Identify the Goal: What specific goal are you trying to address? Think about your passions, hobbies, and academic interests. The latter are an excellent candidate to focus on. Some majors have suggestions listed below: these were provided by faculty in those departments. Other majors could consider a focus tied to a big final assignment in one of their recent courses in their major. 
+Biomedical Engineering majors may consider one of the following: 
+If you have started (or completed) the Cell/Tissue Design final project in BMEG100, design an organoid, which involves combining a cell type, biomaterial, and testing method. Have the website include a description and diagram of your design concept, a testing method, a needs statement, and an impact statement relevant to their organoid. Also include a link to a paper that supports your idea and a paragraph describing how that paper supports your design concept.
+Otherwise, create a website related to your BMEG100 Lab Report 1, Cytoskeletal and Nuclear Staining Lab Report Guidelines, linked here (University of Delaware account required to access).
+Chemistry and Chemical Engineering majors may consider creating an automated chemistry assistant that takes balanced reaction equations, starting reactant masses, and a harvested product amount to determine the limiting reactant, theoretical yield, and percent yield based on principles from Chemistry 2e (OpenStax) — Chapter 4: Chemical Reactions and Stoichiometry. To avoid manually compiling atomic mass tables or writing custom string tokenizers, use the ChemPy library to parse molecular formulas into exact molecular weights and verify reaction stoichiometry against compound data from the NIH PubChem Database. The program outputs an organized breakdown of limiting reagent status, product yields, and remaining masses of unreacted species. Also use the heat of the reaction to determine if it is exothermic or endothermic, and compute the heat flow per mole of the product.
+Majors in the Electric & Computer Engineering department may consider a steganography project that hides messages in images, and then retrieves those messages from uploaded images. 
+Mechanical Engineering majors may consider a project that somehow uses both the NumPy and SciPy Python libraries. 
+I want to create a workout tracker to help people organize their workouts. Creating a website where users can easily record this information and look back at it will be very useful.
+
+
+Prior Implementations: Search the internet. What existing tools or websites currently attempt to address it?
+There are a few websites like “Strong” and “JEFIT”
+
+
+Your Implementation: Briefly describe the legitimate purpose or functionality of your site. How would you want this web application to be used?
+My website will be a simple workout tracker that allows users to create and save workouts. They can add exercises and the reps and sets as well as the weight they use. They can see statistics about their training and the goal is to make it easier to organize workouts and track progress
+
+
+Part 2: The Input-Process-Output (IPO) Model
+Think about the fundamental flow of your program.
+The Core Goal: Every program has three main phases: taking input, processing data, and presenting output. In one sentence, what is the ultimate goal your program will accomplish for the user? Be specific and use CS1 concepts.
+Take workout information, process the information, and display workout history and progress
+
+
+
+Input: What specific information will the user need to provide to your program? (e.g., a city name, a numerical budget, a list of hobbies).
+The name of the workout, exercises they complete as well as sets reps and weights used.
+
+
+
+Processing: At a high level, how will the computer manipulate or evaluate that data? (e.g., calculate the average, filter out options that are too expensive, compare the input against a database).
+The program will store each workout and its exercises in a list of dataclass objects and it will loop through previous workouts to display them and calculate statistics.
+
+
+
+Output: What will the user get back? (e.g., a recommendation, a calculated safety factor, a formatted schedule).
+The user will get their saved workouts, exercise details, workout history, and progress statistics.
+
+
+
+Part 3: Data Abstraction
+Identify the "nouns" of your problem.
+Representing Reality: Abstraction is the process of representing the real world inside a computer by ignoring unnecessary details. What are the core "things" (nouns) your program needs to track? (e.g., If building a recipe app, the nouns are "Recipe" and "Ingredient").
+The program needs to track workouts and exercises.
+
+
+
+Identifying Properties: For the most important "thing" you listed above, what 3 to 4 specific details do you actually need to solve your problem, and what details will you abstract away?
+Details I need: (e.g., Ingredient name, weight, cost)
+Details I will ignore: (e.g., Ingredient color, brand, expiration date)
+Details I need
+Workout name
+Workout data
+Muscle group
+List of exercises
+Exercise name
+Sets, reps, and weight
+Details i dont need
+Gym location
+Brand of equipment
+Heart rate
+
+
+Part 4: Challenges, AI Strategy, & Goals
+Difficulties: What parts of this project seem the most difficult or technically complex?
+The most difficult part will be organizing the information and making sure everything is saved correctly.
+
+
+Coding Strategy: If you will be using an LLM to help code, how will you ensure you understand the generated code and avoid "hallucinations" or "shallow learning" (copying without understanding)? If you won't be using an LLM to help code, this project might take about 4 hours a week to complete, so list each of the days and times in which you work on the project. 
+I plan to use chat gpt to help me understand tne code and work through problems that i run into.
+
+
+Goals: What is your ultimate goal for this project? (e.g., Impress the graders with a creative UI, build something I can use in my other classes, learn Drafter deeply).
+Create a website that looks good and works properly and meets all the expectations. I want my website to be something actually useful that myself or others might want to use.
+
+
+Part 5: Research & Brainstorming Conversation
+Have a conversation with a Generative AI tool (like ChatGPT or Claude) OR a friend about your project idea. Do not ask for code. Instead, use the AI/friend as a sounding board to research your problem.
+The Initial Prompt/Question: Ask the AI or your friend to help you brainstorm. (e.g., "I want to build a simple web tool to help students track their study hours. What are 3 common problems students face when tracking their time, and what are 3 simple features a basic tool should have?"). Paste your prompt below:
+I want to create a workout tracker website for my computer science final project. What are some common problems people have when keeping track of their workouts, and what are some simple features I could include to help solve those problems?
+
+
+
+
+
+The Response: Briefly summarize the best ideas the AI or your friend suggested. What existing solutions or prior apps did they mention?
+chatgpt suggested that people sometimes forget how much weight they used in previous workouts, have trouble organizing their exercises, and struggle to see their progress over time. It suggested features like logging exercises, recording sets and reps, saving workout history, and displaying basic statistics.
+
+
+
+
+
+The Pushback: You must reply to the AI/friend to narrow the scope when it's over-ambitious. Pick the most complex feature they suggested and explain why it is too complicated for an  introductory programming project. Ask them for a simpler alternative. Paste your response here:
+Some of the suggested features could be too complicated for this project. Creating progress charts and automatically recommending weights would take too much time and would be too complex. Could we replace these with basic statistics that calculate the total number of workouts and display previous exercises
+
+
+
+Reflection: Based on this conversation, how has your project idea changed or become more focused?
+I decided to focus more on the basic workout tracking features instead of trying to create a complete fitness application. The website will mainly allow users to create workouts, save exercises, record sets and reps, and view their workout history.
+
+
+
+
+Part 6: Resource Planning
+What resources will you use if you get stuck? 
+I will go to friends in the class to help, or use google or a LLM
+
+
+If your LLM provides code that causes a Drafter or Bakery error, or if you run into a problem during deployment, what is your step-by-step debugging plan to resolve it?
+I will try to debug it myself and check where the error happened. If i cannot solve it I will ask chatgpt to explain the answer
+
+
+
+Part 7: LLM Conversation
+If you used an LLM in any part of this work, copy and paste every part of that conversation below. Otherwise, you may be given a zero for the assignment. Obviously, these words will not all be yours, and this is the exception to the requirement at the top of this assignment that all responses be in your own words. If you did not use an LLM to assist you in this assignment, simply say so below.
+I used a LLM to help brainstorm ideas for my project. The conversation is pasted below
+
+help me come up with ideas for a website to create for my computer science class
+Absolutely. Since your class is using Drafter, I'd focus on websites that are actually useful, somewhat fun to build, and have enough functionality to satisfy the final project requirements.
+I know you previously considered a workout tracker, which is honestly a pretty solid option. But here are some other ideas worth considering.
+Website ideas
+Fitness, lifestyle & personal organization
+
+
+1. Workout Tracker
+Log workouts, exercises, sets, reps, and personal records. View workout history and track progress.
+Strong project idea
+
+
+2. Habit Tracker
+Create daily habits, mark them complete, track streaks, and see your consistency over time.
+
+
+3. Budget Tracker
+Enter expenses, categorize spending, set budgets, and see where your money goes.
+
+
+4. Student Planner
+Add assignments, due dates, classes, and priorities. Track completed and unfinished work.
+Entertainment & fun
+
+
+5. Movie Tracker
+Keep a watchlist, rate movies, write reviews, and organize movies by genre.
+
+
+6. Video Game Tracker
+Track games you've played, games you want to play, ratings, completion status, and playtime.
+
+
+7. Fantasy Sports Manager
+Create teams, manage players, record scores, and track league standings.
+
+
+8. Food Rating Website
+Keep track of restaurants you've visited, rate meals, write reviews, and create a list of places to try.
+More unique ideas
+9. College Social Event Planner – Add events, manage attendance, and keep track of upcoming parties and activities.
+10. Random Activity Generator – Generate activities based on categories, save favorites, and track things you've tried.
+11. Personal Goal Tracker – Create goals, break them into smaller milestones, and track completion.
+12. Fantasy Creature Collector – Collect fictional creatures, assign attributes, organize collections, and complete challenges.
+13. Study Quiz Generator – Create custom quizzes, save questions, track scores, and review incorrect answers.
+14. Recipe Book – Save recipes, organize by category, rate meals, and create shopping lists.
+What I'd recommend
+Considering the requirements of your Drafter final project, I'd narrow it down to these four:
+Project
+Difficulty
+Potential
+Workout Tracker
+Medium
+Excellent
+Movie Tracker
+Easy-Medium
+Very good
+Video Game Tracker
+Medium
+Excellent
+Student Planner
+Medium
+Very good
+
+Your project requires:
+At least 7 routes and 5 pages.
+A State dataclass with at least 4 fields.
+A second dataclass stored in a list or dictionary.
+At least 3 inputs, 3 if statements, and a meaningful loop.
+Multiple ways to modify and interact with stored information.
+All four ideas can satisfy those requirements.
+Let's narrow it down
+1. What kind of website sounds most appealing?
+Something useful that I'd actually use
+Something entertaining or fun
+Something creative and unique
+Something related to college life
+Honestly, anything interesting
+2. How complicated do you want it?
+Easy, don't want to overcomplicate it
+Medium, willing to put in some work
+Ambitious, want an impressive final product
+3. What's most important?
+Easy to code
+Interesting and unique
+Looks really good
+Lots of functionality
+I want to find something that's actually enjoyable to build rather than something that feels like another homework assignment.
+
+
+
+
+
+Part 8: Submit
+In Google docs, with this document open, please click on File > Download > Microsoft Word (.docx), and make sure you put that download somewhere you can find it again. Then, upload it to the Canvas assignment about selecting or brainstorming your final project. 
+
+When you're done with this assignment, review this page of the Drafter documentation to better prepare for the next step.
+
+
+
+
+
+
+
+DESIGN:
+
+
+Final Project Design Phase
+Computer Science - Week 11
+Oct 3, 2026 - Version 0.0.4
+
+
+
+For complete instructions and project ideas, refer to the assignment in Canvas. Specifically, review the final project requirements before you continue below. If you have not reviewed the project requirements in Canvas (you might have to go to the modules view and check the current or past week's content), you will not be able to properly complete the parts below. In addition, it may be helpful to review the information on this Drafter documentation page.
+0) Project Planning and Preparation
+Successful programmers spend time planning before they begin coding. After reviewing the project requirements, answer the following questions to help guide your design and development process. 
+What concepts from class or previous assignments might help you complete this project? Which programming concepts (loops, conditionals, lists, classes, etc.) do you expect to use? What programming skills do you want to improve while completing this project?
+I expect to use dataclasses to store the users import and make it more accessible when I need to access it. I also expect to use lists and loops for this project
+
+
+
+Which parts of the project do you expect to be the easiest for you? The hardest? Why?
+Creating the pages and buttons should be the easiest part. The hardest will probably be correctly displaying the right data on the different pages
+
+
+
+Even though you have not yet designed the final project, estimate which tasks will likely require the most time and effort? Which features or components should be implemented first? 
+I think making the different routes work together will take the most time. I shart first create the basic website structure, then I can implement the ability to add workouts and view them.
+
+
+
+What distractions might interfere with your work and how will you minimize them? What resources will you need available while working? What questions, if any, do you still have about the assignment requirements? 
+I will probably get distracted by other assignments for other classes. I will minimize them by setting time aside to work on this project specifically. I have no questions
+
+
+
+1) Site Diagram
+Create a mock-up of your planned website. We suggest you make the mockup on paper, although you can also use software like PowerPoint or Slides to make a mockup. There is other design software that could also be used, but we strongly encourage you to keep it simple. Do not spend more than 15-30 minutes detailing the mock-up. Your goal should be to make a very quick and dirty diagram, to show that you have some kind of idea.
+
+
+We recommend drawing each page as a rectangle, and laying out the text, buttons, and other components inside. Then, use arrows to indicate links between pages. Label each page the way you will name each function, and then put labels on the arrows to indicate what the button links. Also write down any parameters that should come into the pages.
+
+
+In addition to the pages and routes, write down what fields your `State` will have, both their names and types. Think clearly about what data will need to be persistent across the entire website.
+
+
+Add photo(s) or screenshot(s) of your website mock-up and labeled diagram on the next page. 
+ 2) Implementing Requirements
+This table should serve as a draft for how you will implement the requirements into your final project. You may change your ideas later on, but your final site must fulfill all the requirements.
+
+
+Requirement
+Implementation
+Purpose/Functionality
+
+
+A 1-2 sentence description of the purpose or functionality of your site
+A workout tracker that allows users to record workouts and save exercises. They can view workout history and track their progress.
+State Dataclass Attributes
+ 
+Minimum of 4 attributes, one of which must be a list/dict of instances of your second dataclass.
+
+
+Briefly describe each attribute, its type, and how it will be meaningfully modified throughout the site.
+Username: str - stores the users name, can be changed in settings
+
+
+Workouts: list[Workout] - stores all recorded workouts. Workouts can be added and deleted
+
+
+Fitness_goal: str - Stores the user’s current goal and can be updated
+
+
+Next_workout_id: int - keeps track of the next unique workout ID and increases when a workout is added
+Second Dataclass
+
+
+Your second dataclass, including its attributes, their types, and how they will be meaningfully modified (if they are modified)
+Workout
+Id: str - unique ID for each workout
+Date: str - Date the workout took place
+Category: str - type if workout/muscle group
+Notes: str - additional notes about the workout
+
+
+Routes (minimum 7) 
+
+
+The names of your route functions
+Index - home page
+Add_workout - page for entering a new workout
+Save_workout - Saves a new workout
+Workout_history - display previous workouts
+Workout_details - displays information about a specific workout
+Edit_workout - allows the user to edit a workout
+Delete_workout - allows user to delete workout
+Settings - displays settings and lets user change name and goal
+Pages (minimum 5)
+
+
+A brief description of the pages in your site
+Home Page - welcome message and navigation
+Add workout page - page for entering workout information
+Workout history page - list of previous workouts recorded
+Progress page - shows total workouts and workout categories
+Settings page - allows user to change their information
+User Input (minimum 3)
+
+
+Description of user input components (TextBox, TextArea, CheckBox, or SelectBox) and their purposes
+
+
+For more information on these input types, see Drafter Documentation.
+Enter the date of a workout
+Select the workout category
+Enter exercises and notes form the workout
+Enter or update fitness goal
+If Statements (minimum 3)
+Brief description of what will be evaluated in your if statements and how they will meaningfully change the logic of the site
+Check whether workout list is empty before displaying workout history
+Check whether a workout ID matches selected workout before displaying
+Check if user has entered a goal before displaying it
+Check if workout input field is empty before saving a workout
+Loop (minimum 1)
+This loop must iterate over the list/dict of dataclass instances in your State attribute.
+Description of this loop and why it is meaningful to the site
+Use a for loop to go through the list of workout objects and display each workout on the workout history page. It can be used to calculate statistics for progress page also.
+
+LLM Conversation
+If you used an LLM in any part of this work, copy and paste every part of that conversation below. Otherwise, you may be given a zero for the assignment. Obviously, these words will not all be yours, and this is the exception to the requirement at the top of this assignment that all responses be in your own words. If you did not use an LLM to assist you in this assignment, simply say so below.
+I did not use a LLM
+
+Final Submission
+When you are finished, download this file as a Word Document (docx) and upload the file to the appropriate assignment on Canvas.
+
+
+
+
+
