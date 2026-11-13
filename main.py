@@ -7,6 +7,7 @@ set_website_title("Workout Tracker")
 set_site_information(
     author="Aiden Hearn",
     description="Track workouts, record exercises, and monitor your fitness progress.",
+    planning = [],
     sources="Thanks to the Drafter documentation and my CISC-108 course materials.",
     links=["https://aiden-h13.github.io/workout-tracker/"]
 )
